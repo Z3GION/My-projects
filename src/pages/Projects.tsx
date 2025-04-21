@@ -15,13 +15,15 @@ const projects = [
     description: "Test your typing speed and accuracy with a beautiful, interactive interface.",
     icon: Type,
     link: "https://github.com/Z3GION/Typing-Speed-Tester-html-css-js-",
-    bg: "from-[#d3e4fd] to-[#b1abd4]"
+    bg: "from-[#d3e4fd] to-[#b1abd4]",
+    run: null // No live link provided
   },
   {
     title: "Water Quality System (Streamlit)",
     description: "Analyse and predict water quality using machine learning, with an interactive dashboard built in Streamlit.",
     icon: Droplet,
     link: "https://github.com/Z3GION/Water-Quality-Prediction-python-",
+    run: "https://appapppy-taapgakhrtdgynejwr95ei.streamlit.app/",
     bg: "from-[#e5deff] to-[#f2fce2]"
   },
   {
@@ -29,6 +31,7 @@ const projects = [
     description: "A web tool that predicts laptop prices using detailed specs and machine learning models.",
     icon: Laptop,
     link: "https://github.com/Z3GION/Laptop-Price-Prediction",
+    run: null, // No live link provided
     bg: "from-[#f2fce2] to-[#b1abd4]"
   },
   {
@@ -36,6 +39,7 @@ const projects = [
     description: "Quickly predict wine quality from its characteristics using advanced ML algorithms.",
     icon: Wine,
     link: "https://github.com/Z3GION/Wine-Quality-Prediction",
+    run: null, // No live link provided
     bg: "from-[#d3e4fd] to-[#e5deff]"
   },
   {
@@ -43,6 +47,7 @@ const projects = [
     description: "A simple and efficient to-do list web app built with HTML, CSS, and JavaScript.",
     icon: ListTodo,
     link: "https://github.com/Z3GION/To-Do-LIST-html.-css-js-",
+    run: null, // No live link provided
     bg: "from-[#f2fce2] to-[#ffdee2]"
   },
 ];
@@ -54,7 +59,7 @@ const Projects = () => (
       Explore some of my favorite machine learning and automation projects.
     </p>
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-5xl">
-      {projects.map(({ title, description, icon: Icon, link, bg }) => (
+      {projects.map(({ title, description, icon: Icon, link, run, bg }) => (
         <Card key={title} className={`shadow-lg bg-gradient-to-br ${bg} hover-scale transition-transform duration-200`}>
           <CardHeader className="flex flex-row items-center gap-3 pb-2 border-b border-border">
             <div className="bg-white/90 rounded-full p-2 shadow">
@@ -68,10 +73,20 @@ const Projects = () => (
               href={link}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-2 inline-block bg-primary text-primary-foreground px-4 py-2 rounded-lg hover:bg-primary/90 transition text-sm font-semibold shadow"
+              className="mt-2 mr-2 inline-block bg-primary text-primary-foreground px-4 py-2 rounded-lg hover:bg-primary/90 transition text-sm font-semibold shadow"
             >
               View Project
             </a>
+            {run && (
+              <a
+                href={run}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-2 inline-block bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition text-sm font-semibold shadow ml-2"
+              >
+                Run
+              </a>
+            )}
           </CardContent>
         </Card>
       ))}
@@ -80,4 +95,3 @@ const Projects = () => (
 );
 
 export default Projects;
-
