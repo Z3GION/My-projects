@@ -9,7 +9,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem
 } from "@/components/ui/sidebar";
-import { Home, Star, Rocket, Settings } from "lucide-react";
+import { Home, Star, Rocket, Settings, Github } from "lucide-react";
 
 const items = [
   {
@@ -34,12 +34,21 @@ const items = [
   },
 ];
 
+// Separate "GitHub Sync" for emphasis
+const githubItem = {
+  title: "GitHub Sync",
+  url: "#",
+  icon: Github,
+};
+
 export function AppSidebar() {
   return (
     <Sidebar>
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel className="text-primary font-bold tracking-wide">Navigation</SidebarGroupLabel>
+          <SidebarGroupLabel className="text-primary font-bold tracking-wide bg-gradient-to-r from-[#b1abd4] via-[#f2fce2]/60 to-[#d3e4fd]/70 px-4 py-2 rounded-md mb-2 shadow">
+            Navigation
+          </SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {items.map((item) => (
@@ -52,6 +61,18 @@ export function AppSidebar() {
                   </SidebarMenuButton>
                 </SidebarMenuItem>
               ))}
+              {/* Add the highlighted GitHub Sync item */}
+              <SidebarMenuItem key={githubItem.title}>
+                <SidebarMenuButton asChild>
+                  <a
+                    href={githubItem.url}
+                    className="flex items-center gap-3 py-2 px-3 rounded bg-gradient-to-r from-[#23272f] to-[#474d57] text-white hover:bg-gradient-to-tr hover:from-[#333745] hover:to-[#6e59a5] shadow-lg transition-all border border-[#23272f]/40 font-inter"
+                  >
+                    <githubItem.icon className="w-5 h-5" />
+                    <span className="font-semibold">GitHub Sync</span>
+                  </a>
+                </SidebarMenuButton>
+              </SidebarMenuItem>
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
@@ -59,3 +80,4 @@ export function AppSidebar() {
     </Sidebar>
   );
 }
+
