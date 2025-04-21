@@ -1,13 +1,23 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+// Stunning frontend with Hero, Sidebar, Features
+
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+import HeroSection from "@/components/HeroSection";
+import FeatureCards from "@/components/FeatureCards";
+import { AppSidebar } from "@/components/app-sidebar";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
+    <SidebarProvider>
+      <div className="min-h-screen flex bg-gradient-to-tr from-white via-[#e5deff] to-[#d3e4fd]">
+        <AppSidebar />
+        <main className="flex-1 flex flex-col items-center w-full min-h-screen overflow-x-hidden">
+          <SidebarTrigger />
+          <HeroSection />
+          <FeatureCards />
+        </main>
       </div>
-    </div>
+    </SidebarProvider>
   );
 };
 
