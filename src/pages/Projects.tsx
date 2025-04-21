@@ -16,7 +16,7 @@ const projects = [
     icon: Type,
     link: "https://github.com/Z3GION/Typing-Speed-Tester-html-css-js-",
     bg: "from-[#d3e4fd] to-[#b1abd4]",
-    run: null // No live link provided
+    run: "https://vercel.com/devs-projects-5c3ca102/typing-speed-tester-html-css-js/GHb87SjLkFmqAmy6VDqXAn9LWvw7"
   },
   {
     title: "Water Quality System (Streamlit)",
@@ -31,7 +31,7 @@ const projects = [
     description: "A web tool that predicts laptop prices using detailed specs and machine learning models.",
     icon: Laptop,
     link: "https://github.com/Z3GION/Laptop-Price-Prediction",
-    run: null, // No live link provided
+    run: null,
     bg: "from-[#f2fce2] to-[#b1abd4]"
   },
   {
@@ -39,7 +39,7 @@ const projects = [
     description: "Quickly predict wine quality from its characteristics using advanced ML algorithms.",
     icon: Wine,
     link: "https://github.com/Z3GION/Wine-Quality-Prediction",
-    run: null, // No live link provided
+    run: null,
     bg: "from-[#d3e4fd] to-[#e5deff]"
   },
   {
@@ -47,7 +47,7 @@ const projects = [
     description: "A simple and efficient to-do list web app built with HTML, CSS, and JavaScript.",
     icon: ListTodo,
     link: "https://github.com/Z3GION/To-Do-LIST-html.-css-js-",
-    run: null, // No live link provided
+    run: null,
     bg: "from-[#f2fce2] to-[#ffdee2]"
   },
 ];
