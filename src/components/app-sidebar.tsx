@@ -23,6 +23,11 @@ const items = [
     icon: Star,
   },
   {
+    title: "Paper.io Mini",
+    url: "/paper-io",
+    icon: Rocket,
+  },
+  {
     title: "Features",
     url: "#features",
     icon: Rocket,
