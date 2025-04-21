@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Book, Type, Droplet, Laptop, Wine } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -8,35 +7,35 @@ const projects = [
     title: "Novel Scraper",
     description: "A scraper that pulls entire novels from multiple sources, built for efficient and reliable content extraction.",
     icon: Book,
-    link: "#",
+    link: "https://github.com/yourusername/novel-scraper",
     bg: "from-[#f2fce2] to-[#e5deff]"
   },
   {
     title: "Typing Tester",
     description: "Test your typing speed and accuracy with a beautiful, interactive interface.",
     icon: Type,
-    link: "#",
+    link: "https://github.com/yourusername/typing-tester",
     bg: "from-[#d3e4fd] to-[#b1abd4]"
   },
   {
     title: "Water Quality System (Streamlit)",
     description: "Analyse and predict water quality using machine learning, with an interactive dashboard built in Streamlit.",
     icon: Droplet,
-    link: "#",
+    link: "https://github.com/yourusername/water-quality-streamlit",
     bg: "from-[#e5deff] to-[#f2fce2]"
   },
   {
     title: "Laptop Price Prediction",
     description: "A web tool that predicts laptop prices using detailed specs and machine learning models.",
     icon: Laptop,
-    link: "#",
+    link: "https://github.com/yourusername/laptop-price-prediction",
     bg: "from-[#f2fce2] to-[#b1abd4]"
   },
   {
     title: "Wine Quality Prediction",
     description: "Quickly predict wine quality from its characteristics using advanced ML algorithms.",
     icon: Wine,
-    link: "#",
+    link: "https://github.com/yourusername/wine-quality-prediction",
     bg: "from-[#d3e4fd] to-[#e5deff]"
   },
 ];
@@ -58,13 +57,14 @@ const Projects = () => (
           </CardHeader>
           <CardContent>
             <CardDescription className="mb-4">{description}</CardDescription>
-            {/* Placeholder for link - update <a> to Link and real URLs */}
-            <Link
-              to={link}
+            <a
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
               className="mt-2 inline-block bg-primary text-primary-foreground px-4 py-2 rounded-lg hover:bg-primary/90 transition text-sm font-semibold shadow"
             >
               View Project
-            </Link>
+            </a>
           </CardContent>
         </Card>
       ))}
