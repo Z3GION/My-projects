@@ -1,42 +1,49 @@
+
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Book, Type, Droplet, Laptop, Wine } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Book, Type, Droplet, Laptop, Wine, ListTodo } from "lucide-react";
 
 const projects = [
   {
     title: "Novel Scraper",
     description: "A scraper that pulls entire novels from multiple sources, built for efficient and reliable content extraction.",
     icon: Book,
-    link: "https://github.com/yourusername/novel-scraper",
+    link: "https://github.com/Z3GION/Novel-Scraper",
     bg: "from-[#f2fce2] to-[#e5deff]"
   },
   {
     title: "Typing Tester",
     description: "Test your typing speed and accuracy with a beautiful, interactive interface.",
     icon: Type,
-    link: "https://github.com/yourusername/typing-tester",
+    link: "https://github.com/Z3GION/Typing-Speed-Tester-html-css-js-",
     bg: "from-[#d3e4fd] to-[#b1abd4]"
   },
   {
     title: "Water Quality System (Streamlit)",
     description: "Analyse and predict water quality using machine learning, with an interactive dashboard built in Streamlit.",
     icon: Droplet,
-    link: "https://github.com/yourusername/water-quality-streamlit",
+    link: "https://github.com/Z3GION/Water-Quality-Prediction-python-",
     bg: "from-[#e5deff] to-[#f2fce2]"
   },
   {
     title: "Laptop Price Prediction",
     description: "A web tool that predicts laptop prices using detailed specs and machine learning models.",
     icon: Laptop,
-    link: "https://github.com/yourusername/laptop-price-prediction",
+    link: "https://github.com/Z3GION/Laptop-Price-Prediction",
     bg: "from-[#f2fce2] to-[#b1abd4]"
   },
   {
     title: "Wine Quality Prediction",
     description: "Quickly predict wine quality from its characteristics using advanced ML algorithms.",
     icon: Wine,
-    link: "https://github.com/yourusername/wine-quality-prediction",
+    link: "https://github.com/Z3GION/Wine-Quality-Prediction",
     bg: "from-[#d3e4fd] to-[#e5deff]"
+  },
+  {
+    title: "To-Do List",
+    description: "A simple and efficient to-do list web app built with HTML, CSS, and JavaScript.",
+    icon: ListTodo,
+    link: "https://github.com/Z3GION/To-Do-LIST-html.-css-js-",
+    bg: "from-[#f2fce2] to-[#ffdee2]"
   },
 ];
 
@@ -73,3 +80,4 @@ const Projects = () => (
 );
 
 export default Projects;
+
