@@ -1,4 +1,3 @@
-
 import {
   Sidebar,
   SidebarContent,
@@ -10,6 +9,7 @@ import {
   SidebarMenuItem
 } from "@/components/ui/sidebar";
 import { Home, Star, Rocket, Settings, Github } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const items = [
   {
@@ -18,13 +18,13 @@ const items = [
     icon: Home,
   },
   {
-    title: "Features",
-    url: "#features",
+    title: "Projects",
+    url: "/projects",
     icon: Star,
   },
   {
-    title: "Launch",
-    url: "#",
+    title: "Features",
+    url: "#features",
     icon: Rocket,
   },
   {
@@ -54,10 +54,18 @@ export function AppSidebar() {
               {items.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton asChild>
-                    <a href={item.url} className="flex items-center gap-3 py-2 px-3 rounded hover:bg-primary/10 transition-colors font-inter">
-                      <item.icon className="w-5 h-5" />
-                      <span>{item.title}</span>
-                    </a>
+                    {/* Use Link for internal navigation */}
+                    {item.url.startsWith("/") ? (
+                      <Link to={item.url} className="flex items-center gap-3 py-2 px-3 rounded hover:bg-primary/10 transition-colors font-inter">
+                        <item.icon className="w-5 h-5" />
+                        <span>{item.title}</span>
+                      </Link>
+                    ) : (
+                      <a href={item.url} className="flex items-center gap-3 py-2 px-3 rounded hover:bg-primary/10 transition-colors font-inter">
+                        <item.icon className="w-5 h-5" />
+                        <span>{item.title}</span>
+                      </a>
+                    )}
                   </SidebarMenuButton>
                 </SidebarMenuItem>
               ))}
@@ -80,4 +88,3 @@ export function AppSidebar() {
     </Sidebar>
   );
 }
-
